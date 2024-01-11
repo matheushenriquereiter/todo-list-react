@@ -1,0 +1,45 @@
+.app {
+  min-height: 100vh;
+  background-color: #23262c;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin: 80px 20px 80px 20px;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.main {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container {
+  display: flex;
+}
+
+.completed {
+  height: 48px;
+  font-size: 14px;
+  width: 100%;
+  opacity: 0.5;
+
+  display: flex;
+  align-items: end;
+}
+
+@media (max-width: 440px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .card {
+    margin: 40px 20px 40px 20px;
+  }
+}
