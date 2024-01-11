@@ -18,7 +18,7 @@ export const Header = () => {
 
         <img
           className={profileImage}
-          src="/src/assets/amogus.jpeg"
+          src="/public/amogus.jpeg"
           alt="profile image"
         />
       </div>
