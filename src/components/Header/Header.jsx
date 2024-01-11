@@ -16,11 +16,7 @@ export const Header = () => {
           <h2 className={subTitle}>get stuff done, stop procrastinating.</h2>
         </div>
 
-        <img
-          className={profileImage}
-          src="/public/amogus.jpeg"
-          alt="profile image"
-        />
+        <img className={profileImage} src="/amogus.jpeg" alt="profile image" />
       </div>
     </header>
   );
