@@ -62,7 +62,11 @@ export const App = () => {
             <SearchInput onChange={handleSearchTodo} />
           </div>
 
-          <TodoList todos={getSearchedTodos()} setTodos={setTodos} />
+          <TodoList
+            todos={todos}
+            searchedTodos={getSearchedTodos()}
+            setTodos={setTodos}
+          />
 
           <FormAddTodo onSubmit={handleAddTodo} />
         </main>

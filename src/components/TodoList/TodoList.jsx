@@ -2,10 +2,10 @@ import { todoList } from "./styles.module.css";
 
 import { Todo } from "../Todo/Todo";
 
-export const TodoList = ({ todos, setTodos }) => {
+export const TodoList = ({ todos, searchedTodos, setTodos }) => {
   return (
     <ul className={todoList}>
-      {todos.map(({ name, isDone }) => (
+      {searchedTodos.map(({ name, isDone }) => (
         <Todo
           key={name}
           name={name}
