@@ -36,8 +36,6 @@ export const App = () => {
     };
 
     setTodos([todo, ...todos]);
-
-    console.log(localStorage.todos);
   };
 
   const handleSearchTodo = event => setSearch(event.target.value.trim());

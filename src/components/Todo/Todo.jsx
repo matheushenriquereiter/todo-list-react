@@ -1,8 +1,9 @@
-import { todo } from "./styles.module.css";
+import { todo, trash } from "./styles.module.css";
 import { Checkbox } from "../Checkbox/Checkbox";
+import { Trash } from "@phosphor-icons/react";
 
 export const Todo = ({ name, isDone, todos, setTodos }) => {
-  const handleChange = () => {
+  const toggleChecked = () => {
     setTodos(
       todos.map(todo => {
         const todoCopy = { ...todo };
@@ -16,9 +17,14 @@ export const Todo = ({ name, isDone, todos, setTodos }) => {
     );
   };
 
+  const deleteTodo = () => {
+    setTodos(todos.filter(todo => todo.name !== name));
+  };
+
   return (
     <li className={todo}>
-      <Checkbox onChange={handleChange} checked={isDone} />
+      <Checkbox onChange={toggleChecked} checked={isDone} />
+      <Trash onClick={deleteTodo} className={trash} size={30} color="#fff" />
       {name}
     </li>
   );
