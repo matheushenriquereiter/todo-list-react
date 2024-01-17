@@ -1,4 +1,4 @@
-import { todo, trash } from "./styles.module.css";
+import { todo, container, trash } from "./styles.module.css";
 import { Checkbox } from "../Checkbox/Checkbox";
 import { Trash } from "@phosphor-icons/react";
 
@@ -23,8 +23,10 @@ export const Todo = ({ name, isDone, todos, setTodos }) => {
 
   return (
     <li className={todo}>
-      <Checkbox onChange={toggleChecked} checked={isDone} />
-      <Trash onClick={deleteTodo} className={trash} size={30} color="#fff" />
+      <div className={container}>
+        <Checkbox onChange={toggleChecked} checked={isDone} />
+        <Trash onClick={deleteTodo} className={trash} size={30} color="#fff" />
+      </div>
       {name}
     </li>
   );
